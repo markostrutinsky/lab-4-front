@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Director } from './types';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
+interface Props {
+  director: Director;
+}
+
 root.render(
   <React.StrictMode>
     <App />
