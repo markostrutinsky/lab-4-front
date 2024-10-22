@@ -8,6 +8,7 @@ const DirectorCardList : React.FC = () : JSX.Element => {
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        
         const fetchDirectors = async () => {
             try {
                 const response = await axios.get('http://localhost:8080/api/directors');
@@ -31,6 +32,7 @@ const DirectorCardList : React.FC = () : JSX.Element => {
                 directors.map(director => (
                     <DirectorCard 
                         key = {director.id}
+                        id = {director.id}
                         firstName={director.firstName}
                         lastName={director.lastName}
                     />
